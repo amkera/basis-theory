@@ -12,10 +12,9 @@ const App = () => {
   const { bt } = useBasisTheory("key_R9rUbjvfHJf1tsbk57zeSQ", {
     elements: true,
   })
-
   return (
-    <BasisTheoryProvider bt={bt}>
-      <div className="container">
+    <div className="container">
+      <BasisTheoryProvider bt={bt}>
         <Router>
           <NavBar />
           <Routes>
@@ -27,8 +26,8 @@ const App = () => {
             />
           </Routes>
         </Router>
-      </div>
-    </BasisTheoryProvider>
+      </BasisTheoryProvider>
+    </div>
   )
 }
 

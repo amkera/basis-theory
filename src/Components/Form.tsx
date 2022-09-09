@@ -15,7 +15,9 @@ const Form = () => {
   const firstNameRef = useRef(null)
   const lastNameRef = useRef(null)
 
-  const { bt } = useBasisTheory()
+  const { bt } = useBasisTheory("key_R9rUbjvfHJf1tsbk57zeSQ", {
+    elements: true,
+  })
 
   const handlePurchase = async () => {
     const firstName = firstNameRef.current
@@ -38,7 +40,7 @@ const Form = () => {
         },
       })
 
-      await axios.post("https://api.basistheory.com/tokenize/", {
+      await axios.post("https://api.basistheory.com/tokenize", {
         firstName,
         lastName,
         // cardToken: tokens?.card,
@@ -58,19 +60,21 @@ const Form = () => {
     <div id="form">
       <BasisTheoryProvider bt={bt}>
         <TextElement
+          bt={bt}
           id="firstName"
           ref={firstNameRef}
           placeholder="First Name"
           aria-label="First name"
         />
         <TextElement
+          bt={bt}
           id="lastName"
           ref={lastNameRef}
           placeholder="Last Name"
           aria-label="Last Name"
         />
         <div className="row row-input">
-          <CardElement id="card"></CardElement>
+          <CardElement id="card" bt={bt} />
         </div>
         <div className="button">
           <button type="submit" onClick={handlePurchase} disabled={!bt}>
