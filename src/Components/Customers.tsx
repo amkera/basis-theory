@@ -8,8 +8,9 @@ const Customers = () => {
     <div>
       <section>
         <h2>All Customers</h2>
-        {allCustomers.map((customer: CustomerProps) => (
+        {allCustomers.map((customer: CustomerProps, index: number) => (
           <Customer
+            key={index}
             firstName={customer.firstName}
             lastName={customer.lastName}
           />
