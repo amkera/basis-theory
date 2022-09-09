@@ -9,7 +9,7 @@ import {
 } from "@basis-theory/basis-theory-react"
 
 const App = () => {
-  const { bt } = useBasisTheory("key_R9rUbjvfHJf1tsbk57zeSQ", {
+  const { bt } = useBasisTheory("key_MExmzCGrTouzxZXRGeSbKr", {
     elements: true,
   })
   return (
