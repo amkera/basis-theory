@@ -1,4 +1,5 @@
 import Customers from "./Components/Customers"
+
 import Search from "./Components/Search"
 import Form from "./Components/Form"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -9,9 +10,13 @@ import {
 } from "@basis-theory/basis-theory-react"
 
 const App = () => {
-  const { bt } = useBasisTheory("key_MExmzCGrTouzxZXRGeSbKr", {
-    elements: true,
-  })
+  const { bt } = useBasisTheory(
+    `${process.env.REACT_APP_API_KEY_PUBLIC_BT_APPLICATION}`,
+    {
+      elements: true,
+    }
+  )
+
   return (
     <div className="container">
       <BasisTheoryProvider bt={bt}>

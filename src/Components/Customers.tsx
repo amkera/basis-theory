@@ -1,6 +1,5 @@
-import React from "react"
-import Customer, { CustomerProps } from "./Customer"
 import CustomerData from "./CustomerData"
+import Customer, { CustomerProps } from "./Customer"
 
 const Customers = () => {
   const allCustomers = CustomerData
@@ -8,9 +7,8 @@ const Customers = () => {
     <div>
       <section>
         <h2>All Customers</h2>
-        {allCustomers.map((customer: CustomerProps, index: number) => (
+        {allCustomers.map((customer: CustomerProps) => (
           <Customer
-            key={index}
             firstName={customer.firstName}
             lastName={customer.lastName}
           />

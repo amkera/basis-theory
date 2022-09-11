@@ -1,11 +1,11 @@
 import { CustomerProps } from "./Customer"
 
 const allCustomers: CustomerProps[] = [
-  { firstName: "Jameson", lastName: "Jones " },
-  { firstName: "Jo", lastName: "Shmo" },
-  { firstName: "Mary", lastName: "Louis" },
-  { firstName: "Devon", lastName: "Lee" },
-  { firstName: "Sharon", lastName: "Chang" },
+  { id: 1, firstName: "Jameson", lastName: "Jones " },
+  { id: 2, firstName: "Jo", lastName: "Shmo" },
+  { id: 3, firstName: "Mary", lastName: "Louis" },
+  { id: 4, firstName: "Devon", lastName: "Lee" },
+  { id: 5, firstName: "Sharon", lastName: "Chang" },
 ]
 
 export default allCustomers

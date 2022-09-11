@@ -1,4 +1,5 @@
 export type CustomerProps = {
+  id?: number
   firstName: string
   lastName: string
 }

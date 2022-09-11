@@ -15,7 +15,7 @@ const Form = () => {
   const handlePurchase = async () => {
     if (bt) {
       try {
-        const response = await bt.tokenize({
+        await bt.tokenize({
           firstName: firstNameRef.current,
           lastName: lastNameRef.current,
           card: {

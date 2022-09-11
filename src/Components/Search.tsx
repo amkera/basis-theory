@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { CustomerProps } from "./Customer"
+import Customer, { CustomerProps } from "./Customer"
 import CustomerData from "./CustomerData"
 
 const Search = (props: CustomerProps) => {
@@ -29,8 +29,11 @@ const Search = (props: CustomerProps) => {
       <div>
         <strong>All Customers</strong>
         <div>
-          {searchByName().map((customer) => (
-            <p>{`${customer.firstName} ${customer.lastName}`}</p>
+          {searchByName().map((customer: CustomerProps) => (
+            <Customer
+              firstName={customer.firstName}
+              lastName={customer.lastName}
+            />
           ))}
         </div>
       </div>
