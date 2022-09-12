@@ -1,5 +1,4 @@
 import Customers from "./Components/Customers"
-
 import Search from "./Components/Search"
 import Form from "./Components/Form"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -8,6 +7,7 @@ import {
   BasisTheoryProvider,
   useBasisTheory,
 } from "@basis-theory/basis-theory-react"
+import CustomerPage from "./Components/CustomerPage"
 
 const App = () => {
   const { bt } = useBasisTheory(
@@ -24,11 +24,13 @@ const App = () => {
           <NavBar />
           <Routes>
             <Route path="/checkout" element={<Form />} />
-            <Route path="/" element={<Customers />} />
+            <Route path="/customers/:id" element={<CustomerPage />} />
             <Route
               path="/search"
               element={<Search firstName={""} lastName={""} />}
             />
+
+            <Route path="/" element={<Customers />} />
           </Routes>
         </Router>
       </BasisTheoryProvider>

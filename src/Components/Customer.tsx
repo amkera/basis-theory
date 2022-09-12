@@ -1,8 +1,9 @@
 export type CustomerProps = {
-  id?: number
+  id?: any
   firstName: string
   lastName: string
 }
+
 const Customer = ({ firstName, lastName }: CustomerProps) => {
   return (
     <ul>

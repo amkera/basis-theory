@@ -31,6 +31,7 @@ const Search = (props: CustomerProps) => {
         <div>
           {searchByName().map((customer: CustomerProps) => (
             <Customer
+              id={customer.id}
               firstName={customer.firstName}
               lastName={customer.lastName}
             />
