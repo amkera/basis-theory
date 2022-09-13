@@ -3,17 +3,9 @@ nav {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  /* color: #fff; */
   position: relative;
   z-index: 99;
 }
-
-/* .navbar-item {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 .navbar-item li a {
   text-decoration: none;

@@ -1,9 +1,9 @@
+import { useBasisTheory } from "@basis-theory/basis-theory-react"
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import { CustomerProps } from "./Customer"
 import CustomerData from "./CustomerData"
 import Error from "./Error"
-import Customer, { CustomerProps } from "./Customer"
-import { Route, Link, Routes, useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
-import { useBasisTheory } from "@basis-theory/basis-theory-react"
 
 const Customers = () => {
   const allCustomers = CustomerData
@@ -29,7 +29,7 @@ const Customers = () => {
           <Error />
         ) : (
           allCustomers.map((customer: CustomerProps) => (
-            <p>
+            <p key={customer.id}>
               <Link to={`/customers/${customer.id}`}>
                 {customer.firstName} {customer.lastName}
               </Link>

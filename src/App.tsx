@@ -1,13 +1,13 @@
-import Customers from "./Components/Customers"
-import Search from "./Components/Search"
-import Form from "./Components/Form"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import NavBar from "./Nav/Navbar"
 import {
   BasisTheoryProvider,
   useBasisTheory,
 } from "@basis-theory/basis-theory-react"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import CustomerPage from "./Components/CustomerPage"
+import Customers from "./Components/Customers"
+import Form from "./Components/Form"
+import Search from "./Components/Search"
+import NavBar from "./Nav/Navbar"
 
 const App = () => {
   const { bt } = useBasisTheory(

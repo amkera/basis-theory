@@ -19,6 +19,7 @@ const Search = (props: CustomerProps) => {
 
   return (
     <div>
+      <h2>Search Page</h2>
       <input
         type="text"
         name="customer-name"
@@ -27,16 +28,13 @@ const Search = (props: CustomerProps) => {
         onChange={handleOnChange}
       ></input>
       <div>
-        <strong>All Customers</strong>
-        <div>
-          {searchByName().map((customer: CustomerProps) => (
-            <Customer
-              id={customer.id}
-              firstName={customer.firstName}
-              lastName={customer.lastName}
-            />
-          ))}
-        </div>
+        {searchByName().map((customer: CustomerProps) => (
+          <Customer
+            id={customer.id}
+            firstName={customer.firstName}
+            lastName={customer.lastName}
+          />
+        ))}
       </div>
     </div>
   )
