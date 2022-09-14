@@ -29,7 +29,6 @@ const App = () => {
               path="/search"
               element={<Search firstName={""} lastName={""} />}
             />
-
             <Route path="/" element={<Customers />} />
           </Routes>
         </Router>

@@ -5,6 +5,7 @@ import {
   TextElement,
   useBasisTheory,
 } from "@basis-theory/basis-theory-react"
+import "../styles/button.css"
 
 const Form = () => {
   const firstNameRef = useRef(null)
@@ -33,6 +34,7 @@ const Form = () => {
 
   return (
     <div id="form">
+      <h2>Payment</h2>
       <BasisTheoryProvider bt={bt}>
         <TextElement
           id="firstName"
@@ -50,8 +52,14 @@ const Form = () => {
           <CardElement id="card" ref={cardRef} />
         </div>
         <div className="button">
-          <button type="submit" onClick={handlePurchase} disabled={!bt}>
-            Purchase
+          <button
+            className="button-style"
+            data-test-id="button"
+            type="submit"
+            onClick={handlePurchase}
+            disabled={!bt}
+          >
+            Submit
           </button>
         </div>
       </BasisTheoryProvider>

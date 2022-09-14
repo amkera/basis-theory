@@ -24,7 +24,7 @@ const Customers = () => {
   return (
     <div>
       <section>
-        <h2>All Customers</h2>
+        <h2>View all customers</h2>
         {error ? (
           <Error />
         ) : (
