@@ -15,6 +15,7 @@ const Customers = () => {
     try {
       setError(false)
       let tokens: any = bt?.tokens.list()
+      console.log(tokens)
     } catch (e) {
       console.log(e)
       setError(true)
